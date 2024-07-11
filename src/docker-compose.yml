@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: GameWinner
+    image: postgres:14.3
+    environment:
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: GameWinner
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
